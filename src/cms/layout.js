@@ -16,6 +16,23 @@ export default {
         href:'/news',
         title:'News'
       }
+    ],
+    headerLinks : [
+      {
+        id:1,
+        href:'/login',
+        title:'Login'
+      },
+      {
+        id:2,
+        href:'/shop',
+        title:'Shop'
+      },
+      {
+        id:3,
+        href:'/donate',
+        title:'Donate'
+      }
     ]
   }
 }

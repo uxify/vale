@@ -1,4 +1,30 @@
+.header {
+  background: #dadada;
+}
+.headerTopbar{
+  height: 40px;
+  width: 100%;
+  background: #757575;
+}
+.headerWrapper{
+  display: flex;
+}
 .logo {
   width: 200px;
-  height: 100px;
+  height: 60px;
+  background: #cacaca
+}
+.HeaderNavigation{
+  flex: 1;
+}
+
+.quickLinks{
+  display: flex;
+}
+
+.linkBox{
+  background: #8a8a8a;
+  padding: 4px;
+  border-left: 1px solid #fff;
+  width: 50px;
 }
