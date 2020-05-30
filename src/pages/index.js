@@ -2,7 +2,20 @@ import DefaultLayout from '../components/Layouts';
 
 const HomePage = () => {
   return (
-    <DefaultLayout>Ola Home!</DefaultLayout>
+    <DefaultLayout>
+      <div className='section'>
+        <div className='content'>Ola Home!</div>
+      </div>
+      <div className='section'>
+        <div className='content'>Ola Home!</div>
+      </div>
+      <div className='section'>
+        <div className='content'>Ola Home!</div>
+      </div>
+      <div className='section'>
+        <div className='content'>Ola Home!</div>
+      </div>
+    </DefaultLayout>
   )
 }
 

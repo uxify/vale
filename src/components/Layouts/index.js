@@ -1,13 +1,15 @@
 import Header from '../Header';
+import Footer from '../Footer';
 
 import layout from '../../cms/layout';
 
 const Layout = ({ children }) => {
-  const { headerObject } = layout;
+  const { headerObject, footerObject } = layout;
   return (
     <div>
       <Header cms={headerObject}/>
-      {children}
+      <div className='page'>{children}</div>
+      <Footer cms={footerObject}/>
     </div>
   )
 }
