@@ -4,11 +4,14 @@
   "description": "Agile library to create websites, CMS, webapps.",
   "repository": "https://github.com/uxify/vale",
   "scripts": {
-    "dev": "next",
+    "dev": "node server.js",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
+    "@apollo/client": "^3.3.11",
+    "express": "^4.17.1",
+    "graphql": "^15.5.0",
     "next": "^10.0.7",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
