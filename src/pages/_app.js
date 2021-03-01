@@ -2,8 +2,9 @@
 import { ApolloClient, ApolloProvider, InMemoryCache, } from '@apollo/client';
 
 import App from 'next/app';
+import DefaultLayout from '../theme/pro/components/Layouts';
 import './style.css';
-import './theme.css';
+import '../theme/pro/theme.css';
 
 const client = new ApolloClient({
   uri: 'http://localhost:4000',
@@ -17,7 +18,9 @@ class CustomApp extends App {
 
     return (
       <ApolloProvider client={client}>
-        <Component {...pageProps} />;
+        <DefaultLayout>
+          <Component {...pageProps} />
+        </DefaultLayout>
       </ApolloProvider>
     )
   }

@@ -1,50 +1,8 @@
-import { gql, useQuery } from '@apollo/client';
-import DefaultLayout from '../components/Layouts';
-
-const getMainContent = gql`
-    query {
-      mainContent {
-        baseUrl
-        theme {
-          id
-          name
-          colorPrimary
-        }
-        header {
-          logo {
-            imgUrl
-            height
-            width
-          }
-          navigation {
-            pageId
-            name
-            link
-          }
-        }
-        footer {
-          topFooter
-          mainFooter
-          bottomFooter
-        }
-      }
-      page(id:3) {
-        id
-        title
-        description
-        url
-      }
-    }
-      
-  `;
-
+import Content from '../theme/pro/components/Content';
 
 const HomePage = () => {
-
-  const { loading, error, data } = useQuery(getMainContent);
-  console.log('render', loading, error, data)
   return (
-    <DefaultLayout>
+    <Content>
       <div className='section'>
         <div className='content'>Ola Home!</div>
       </div>
@@ -57,7 +15,7 @@ const HomePage = () => {
       <div className='section'>
         <div className='content'>Ola Home!</div>
       </div>
-    </DefaultLayout>
+    </Content>
   )
 }
 

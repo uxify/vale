@@ -6,6 +6,7 @@ import styles from './Header.module.css';
 
 
 const Header = ({ cms }) => {
+  const {logo, navigation} = cms;
   return (
     <div className={styles.header}>
       <div className={styles.headerTopbar}></div>
@@ -21,7 +22,7 @@ const Header = ({ cms }) => {
           flex={1}
           color='#111'
           bg='secondary'>
-          <HeaderNavigation cms={cms} />
+          <HeaderNavigation cms={navigation} />
         </Box>
         <Box
           color='white'
