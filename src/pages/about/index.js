@@ -1,8 +1,8 @@
-import DefaultLayout from '../../components/Layouts';
+import Content from '../../theme/pro/components/Content';
 
 const About = () => {
   return (
-    <DefaultLayout>Ola! About</DefaultLayout>
+    <Content>Ola! About</Content>
   )
 }
 

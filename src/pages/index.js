@@ -1,8 +1,8 @@
-import DefaultLayout from '../components/Layouts';
+import Content from '../theme/pro/components/Content';
 
 const HomePage = () => {
   return (
-    <DefaultLayout>
+    <Content>
       <div className='section'>
         <div className='content'>Ola Home!</div>
       </div>
@@ -15,7 +15,7 @@ const HomePage = () => {
       <div className='section'>
         <div className='content'>Ola Home!</div>
       </div>
-    </DefaultLayout>
+    </Content>
   )
 }
 
