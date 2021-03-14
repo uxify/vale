@@ -1,4 +1,4 @@
-import Content from '../theme/pro/components/Content';
+import Content from 'theme/components/Content';
 
 const HomePage = () => {
   return (

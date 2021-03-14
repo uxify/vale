@@ -2,7 +2,7 @@
 import { ApolloClient, ApolloProvider, InMemoryCache, } from '@apollo/client';
 
 import App from 'next/app';
-import DefaultLayout from '../theme/pro/components/Layouts';
+import DefaultLayout from 'theme/components/Layouts';
 import './style.css';
 import '../theme/pro/theme.css';
 

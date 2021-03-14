@@ -1,44 +1,7 @@
-import { gql, useQuery } from '@apollo/client';
-
+import { useQuery } from '@apollo/client';
+import { getMainContent } from 'gql/gqlQueries';
 import Header from '../Header';
 import Footer from '../Footer';
-
-const getMainContent = gql`
-    query {
-      mainContent {
-        baseUrl
-        theme {
-          id
-          name
-          colorPrimary
-        }
-        header {
-          logo {
-            imgUrl
-            height
-            width
-          }
-          navigation {
-            pageId
-            name
-            link
-          }
-        }
-        footer {
-          topFooter
-          mainFooter
-          bottomFooter
-        }
-      }
-      page(id:3) {
-        id
-        title
-        description
-        url
-      }
-    }
-      
-  `;
 
 const Layout = ({ children }) => {
   const { loading, error, data = {} } = useQuery(getMainContent);
