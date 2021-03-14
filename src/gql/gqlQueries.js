@@ -1,7 +1,5 @@
 import { gql } from '@apollo/client';
 
-
-
 export const getMainContent = gql`
 query {
   mainContent {
@@ -29,12 +27,17 @@ query {
 	  bottomFooter
 	}
   }
-  page(id:3) {
-	id
-	title
-	description
-	url
-  }
 }
-  
+`;
+
+
+export const getPageContent = gql`
+	query PageContent($pageId: ID!) {
+		page(id: $pageId) {
+			id
+			title
+			description
+			url
+		}
+	}
 `;

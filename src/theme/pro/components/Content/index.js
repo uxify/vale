@@ -1,18 +1,8 @@
-import { gql, useQuery } from '@apollo/client';
+import { useQuery } from '@apollo/client';
+import { getPageContent } from 'gql/gqlQueries';
 
-const getPageContent = gql`
-	query {
-		page(id:3) {
-			id
-			title
-			description
-			url
-      	}
-    }
-      
-`;
-const Content = ({ children }) => {
-	const { loading, error, data = {} } = useQuery(getPageContent);
+const Content = ({ children, pageId }) => {
+	const { loading, error, data = {} } = useQuery(getPageContent, { variables: { pageId } });
 	console.log('page', data)
 	if (loading) {
 		return <div>Loading...</div>
