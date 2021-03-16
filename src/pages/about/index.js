@@ -2,7 +2,7 @@ import Content from 'theme/components/Content';
 
 const About = () => {
   return (
-    <Content>Ola! About</Content>
+    <Content pageId={2}>Ola! About</Content>
   )
 }
 
