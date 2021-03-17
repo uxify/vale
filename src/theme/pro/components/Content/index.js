@@ -1,4 +1,5 @@
 import { useQuery } from '@apollo/client';
+import Head from 'next/head'
 import { getPageContent } from 'gql/gqlQueries';
 
 const Content = ({ children, pageId }) => {
@@ -7,8 +8,15 @@ const Content = ({ children, pageId }) => {
 	if (loading) {
 		return <div>Loading...</div>
 	}
+	const {page:{title, description, url}} = data;
 	return (
-		<div className='page' page={data.page}>{children}</div>
+		<>
+		<Head>
+			<title>{title}</title>
+			<meta name="Description" CONTENT={description}></meta>
+		</Head>
+		<div className='page'>{description}</div>
+		</>
 	)
 }
 
